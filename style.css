@@ -1,0 +1,474 @@
+/* ================================
+   RESET BÁSICO
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #f5f5f5;
+}
+
+/* ================================
+   LINKS E BOTÕES
+================================ */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff6600, #0066ff);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px; color: #ffffff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #ff9500, #3399ff);
+  transform: translateY(-3px);
+}
+
+/* Botão maior (CTA) */
+.btn-grande {
+  padding: 15px 35px;
+  font-size: 1.2rem;
+}
+
+/* ================================
+   CONTAINER
+================================ */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================================
+   HEADER E NAVEGAÇÃO
+================================ */
+header {
+  background: linear-gradient(90deg, #0066ff, #ff6600);
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ================================
+   HERO
+================================ */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px 0;
+  background: linear-gradient(135deg, #ff6600, #0066ff);
+  color: #fff;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.hero-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+/* ================================
+   SEÇÕES DE VANTAGENS E CURSOS
+================================ */
+section {
+  padding: 50px 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.vantagem-cards,
+.curso-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* CARD PADRÃO */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #ff6600;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card a.btn {
+  margin-top: 10px;
+}
+
+/* ================================
+   METODOLOGIA E LISTA
+================================ */
+.metodologia ul {
+  list-style: none;
+  max-width: 700px;
+  margin: auto;
+}
+
+.metodologia ul li {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  padding-left: 30px;
+  position: relative;
+}
+
+.metodologia ul li i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff6600;
+}
+
+/* ================================
+   CALL TO ACTION
+================================ */
+.call-to-action {
+  text-align: center;
+  background: linear-gradient(135deg, #ff6600, #0066ff);
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 15px;
+  margin: 50px 0;
+}
+
+/* ================================
+   FORMULÁRIOS LOGIN / REGISTRO / CONTATO
+================================ */
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button.btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  background: #0066ff;
+  color: #fff;
+  padding: 30px 0;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+footer .social-icons a {
+  color: #0044ff;
+  margin: 0 8px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #ff6600;
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+@media(max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .call-to-action {
+    padding: 40px 20px;
+  }
+}
+.descricao-escola {
+  text-align: center;       /* centraliza o texto */
+  font-size: 1.2rem;        /* aumenta um pouco o tamanho */
+  font-weight: 500;         /* deixa o texto mais destacado */
+  color: #000000;           /* azul intenso, harmoniza com degradê */
+  margin: 40px 0;           /* espaço acima e abaixo */
+  line-height: 1.6;         /* melhora a leitura */
+}
+
+@media(max-width: 768px) {
+  .descricao-escola {
+    font-size: 1.1rem;      /* tamanho reduzido em telas pequenas */
+    padding: 0 15px;
+  }
+}
+.contato {
+  padding: 60px 0;
+}
+
+.contato-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.info-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.info-card i {
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.formulario-contato {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mapa {
+  background: linear-gradient(rgba(255,102,0,0.7), rgba(0,102,255,0.7));
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.mapa-frame {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+/* Seções gerais */
+.tema-principal, .missao-visao-valores, .termos-politicas {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.tema-principal h2, .missao-visao-valores h2, .termos-politicas h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #FF6A00; /* Laranja intenso */
+  background: linear-gradient(90deg, #FF6A00, #005BFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Missão, Visão e Valores */
+.mv-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mv-card {
+  background: linear-gradient(135deg, #FF6A00, #005BFF);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  flex: 1 1 250px;
+  max-width: 350px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.mv-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.mv-card p, .mv-card ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.mv-card ul {
+  padding-left: 20px;
+}
+
+.mv-card ul li::marker {
+  color: #FFD700; /* marcador dourado */
+}
+
+/* Termos e Políticas */
+.termos-politicas p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.termos-politicas ul {
+  list-style-type: disc;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.termos-politicas ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .mv-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Alinhar o menu do cabeçalho à direita */
+header nav {
+  display: flex;
+  justify-content: flex-end; /* Alinha o menu à direita */
+}
+
+header nav ul {
+  display: flex;
+  gap: 25px; /* Espaço entre os itens */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #ffffff; /* cor azul intensa */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #ffffff; /* laranja intenso no hover ou ativo */
+}
